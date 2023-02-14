@@ -355,8 +355,10 @@
                       height="5"
                       rx="2.5"
                       fill="#D4D4D4"
-                    ></rect></svg
-                  ><img
+                    ></rect>
+                  </svg>
+
+                  <!-- <img
                     alt=""
                     src="/$Recycle.Bin"
                     width="366"
@@ -365,7 +367,7 @@
                     data-nimg="1"
                     class="pointer-events-none absolute inset-0 h-full w-full"
                     style="color: transparent"
-                  />
+                  /> -->
                 </div>
               </div>
             </div>
