@@ -382,7 +382,7 @@
                 class="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-10 gap-y-8 lg:mx-0 lg:justify-start"
               >
                 <li class="flex">
-                  <img
+                  <!-- <img
                     alt="Forbes"
                     src="/$Recycle.Bin"
                     width="82"
@@ -392,10 +392,10 @@
                     class="h-8"
                     loading="lazy"
                     style="color: transparent"
-                  />
+                  /> -->
                 </li>
                 <li class="flex">
-                  <img
+                  <!-- <img
                     alt="TechCrunch"
                     src="/$Recycle.Bin"
                     width="181"
@@ -405,7 +405,7 @@
                     class="h-8"
                     loading="lazy"
                     style="color: transparent"
-                  />
+                  /> -->
                 </li>
                 <li class="flex">
                   <img
