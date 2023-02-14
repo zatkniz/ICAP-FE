@@ -61,7 +61,7 @@
               ></path></svg
             ><img
               alt=""
-              src="images/qr-code.9c4a9a95.svg"
+              src="/images/qr-code.9c4a9a95.svg"
               width="80"
               height="80"
               decoding="async"
