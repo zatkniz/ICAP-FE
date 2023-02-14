@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ["./public/**/*.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: "media", // or 'class'
   theme: {
     screens: {
@@ -107,10 +107,16 @@ module.exports = {
     },
     animation: {
       none: "none",
-      spin: "spin 1s linear infinite",
+      spin: "spin 6s linear infinite",
       ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       bounce: "bounce 1s infinite",
+      "fade-in": "fade-in 0.5s linear forwards",
+      "spin-slow": "spin 3s linear infinite",
+      "spin-slower": "spin 6s linear infinite",
+      "spin-reverse": "spin-reverse 1s linear infinite",
+      "spin-reverse-slow": "spin-reverse 4s linear infinite",
+      "spin-reverse-slower": "spin-reverse 6s linear infinite",
     },
     aria: {
       checked: 'checked="true"',
@@ -584,6 +590,11 @@ module.exports = {
           transform: "rotate(360deg)",
         },
       },
+      "spin-reverse": {
+        to: {
+          transform: "rotate(-360deg)",
+        },
+      },
       ping: {
         "75%, 100%": {
           transform: "scale(2)",
@@ -603,6 +614,24 @@ module.exports = {
         "50%": {
           transform: "none",
           animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+        },
+      },
+      "fade-in": {
+        from: {
+          opacity: 0,
+        },
+        to: {
+          opacity: 1,
+        },
+      },
+      marquee: {
+        "100%": {
+          transform: "translateY(-50%)",
+        },
+      },
+      "spin-reverse": {
+        to: {
+          transform: "rotate(-360deg)",
         },
       },
     },
@@ -960,6 +989,20 @@ module.exports = {
       30: "30",
       40: "40",
       50: "50",
+    },
+
+    extend: {
+      borderRadius: {
+        "4xl": "2rem",
+        "5xl": "2.5rem",
+      },
+      colors: ({ colors }) => ({
+        gray: colors.neutral,
+      }),
+
+      maxWidth: {
+        "2xl": "40rem",
+      },
     },
   },
   variantOrder: [
