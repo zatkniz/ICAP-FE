@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="flex flex-col !h-screen">
     <MainHeader />
-    <slot />
+    <div class="flex w-full flex-1">
+      <slot />
+    </div>
     <MainFooter />
   </div>
 </template>

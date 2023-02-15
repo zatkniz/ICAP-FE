@@ -26,7 +26,16 @@
               ></path></svg
           ></a>
           <div class="hidden lg:flex lg:gap-10">
-            <a
+            <div v-for="item in navBarOption" :key="item.id">
+              <nuxt-link
+                active-class="text-black bg-gray-300/30"
+                :to="item.href"
+                class="font-semibold text-sm text-gray-600 py-2 px-3 hover:bg-gray-300/50 rounded-md hover:text-black transition-all hover:transition-all"
+              >
+                {{ item.name }}
+              </nuxt-link>
+            </div>
+            <!-- <a
               class="relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]"
               href="/#features"
               ><span class="relative z-10">Features</span></a
@@ -42,7 +51,7 @@
               class="relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]"
               href="/#faqs"
               ><span class="relative z-10">FAQs</span></a
-            >
+            > -->
           </div>
         </div>
         <div class="flex items-center gap-6">
@@ -84,3 +93,26 @@
     </nav>
   </header>
 </template>
+
+<script lang="ts" setup>
+const route = useRoute();
+console.log(route.fullPath);
+
+const navBarOption = {
+  home: {
+    name: "Home",
+    href: "/",
+    id: 1,
+  },
+  contactUs: {
+    name: "Contact Us",
+    href: "/contact-us",
+    id: 2,
+  },
+  services: {
+    name: "Services",
+    href: "/services",
+    id: 3,
+  },
+};
+</script>

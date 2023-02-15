@@ -339,17 +339,19 @@
                   height="5"
                   rx="2.5"
                   fill="#D4D4D4"
-                ></rect></svg
-              ><img
-                alt=""
-                src="/_next/static/media/phone-frame.d4b6b62a.svg"
-                width="366"
-                height="729"
-                decoding="async"
-                data-nimg="1"
-                class="pointer-events-none absolute inset-0 h-full w-full"
-                style="color: transparent"
-              />
+                ></rect>
+              </svg>
+
+              <!-- <img
+                    alt=""
+                    src="/$Recycle.Bin"
+                    width="366"
+                    height="729"
+                    decoding="async"
+                    data-nimg="1"
+                    class="pointer-events-none absolute inset-0 h-full w-full"
+                    style="color: transparent"
+                  /> -->
             </div>
           </div>
         </div>
@@ -366,7 +368,7 @@
             <li class="flex">
               <img
                 alt="Forbes"
-                src="/_next/static/media/forbes.c4b4b0dd.svg"
+                src="/images/forbes.c4b4b0dd.svg"
                 width="82"
                 height="32"
                 decoding="async"
@@ -379,7 +381,7 @@
             <li class="flex">
               <img
                 alt="TechCrunch"
-                src="/_next/static/media/techcrunch.fe121d74.svg"
+                src="/images/techcrunch.fe121d74.svg"
                 width="181"
                 height="32"
                 decoding="async"
@@ -392,7 +394,7 @@
             <li class="flex">
               <img
                 alt="Wired"
-                src="/_next/static/media/wired.42c588dc.svg"
+                src="/images/wired.42c588dc.svg"
                 width="121"
                 height="32"
                 decoding="async"
@@ -405,7 +407,7 @@
             <li class="flex hidden xl:block">
               <img
                 alt="CNN"
-                src="/_next/static/media/cnn.eaae184a.svg"
+                src="/images/cnn.eaae184a.svg"
                 width="68"
                 height="32"
                 decoding="async"
@@ -418,7 +420,7 @@
             <li class="flex">
               <img
                 alt="BBC"
-                src="/_next/static/media/bbc.9cfc75a9.svg"
+                src="/images/bbc.9cfc75a9.svg"
                 width="83"
                 height="32"
                 decoding="async"
@@ -431,7 +433,7 @@
             <li class="flex">
               <img
                 alt="CBS"
-                src="/_next/static/media/cbs.aa596395.svg"
+                src="/images/cbs.aa596395.svg"
                 width="101"
                 height="32"
                 decoding="async"
@@ -444,7 +446,7 @@
             <li class="flex">
               <img
                 alt="Fast Company"
-                src="/_next/static/media/fast-company.8fba32a5.svg"
+                src="/images/fast-company.8fba32a5.svg"
                 width="124"
                 height="32"
                 decoding="async"
@@ -457,7 +459,7 @@
             <li class="flex hidden xl:block">
               <img
                 alt="HuffPost"
-                src="/_next/static/media/huffpost.eeec742f.svg"
+                src="/images/huffpost.eeec742f.svg"
                 width="142"
                 height="32"
                 decoding="async"
