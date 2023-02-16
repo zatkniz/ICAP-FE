@@ -96,7 +96,6 @@
 
 <script lang="ts" setup>
 const route = useRoute();
-console.log(route.fullPath);
 
 const navBarOption = {
   home: {
@@ -104,14 +103,14 @@ const navBarOption = {
     href: "/",
     id: 1,
   },
-  contactUs: {
-    name: "Contact Us",
-    href: "/contact-us",
-    id: 2,
-  },
   services: {
     name: "Services",
     href: "/services",
+    id: 2,
+  },
+  contactUs: {
+    name: "Contact Us",
+    href: "/contact-us",
     id: 3,
   },
 };
