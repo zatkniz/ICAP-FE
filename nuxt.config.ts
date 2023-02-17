@@ -13,6 +13,4 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
-
-  plugins: [{ src: "~/plugins/vuePrlx.ts", mode: "client" }],
 });
