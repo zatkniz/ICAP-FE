@@ -59,7 +59,13 @@
     <div
       class="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row justify-between gap-6 w-full"
     >
-      <div class="mx-auto max-w-2xl lg:mx-0">
+      <div
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-offset="500"
+        class="mx-auto max-w-2xl lg:mx-0"
+      >
         <iframe
           width="420"
           height="315"
@@ -68,7 +74,13 @@
         </iframe>
       </div>
 
-      <div class="text-white flex flex-col gap-2 justify-center items-center">
+      <div
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-offset="500"
+        class="text-white flex flex-col gap-2 justify-center items-center"
+      >
         <h5 class="font-bold text-2xl">THE MARKETING BEHIND THE EXPERTS</h5>
 
         <nuxt-link
@@ -122,6 +134,4 @@ onMounted(async () => {
     });
   }
 });
-
-//create custom directive
 </script>

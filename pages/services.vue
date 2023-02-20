@@ -1,6 +1,8 @@
 <template>
-  <div class="flex flex-col gap-6">
-    <div class="bg-white py-24 px-6 sm:py-32 lg:px-8">
+  <div
+    class="flex flex-col items-center justify-center gap-24 max-w-7xl py-24 px-2 lg:px-6"
+  >
+    <div class="bg-white">
       <div
         class="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl"
       >
@@ -9,19 +11,52 @@
         >
           OUR DIGITAL MARKETING SERVICES
         </h2>
-        <p class="mt-6 text-lg leading-8 text-gray-600">
+        <div class="text-lg leading-8 text-gray-600 mt-12 pt-12">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
-        </p>
+          aliqua.Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+          qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+          fugiat aliqua.Anim aute id magna aliqua ad ad non deserunt sunt. Qui
+          irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
+          occaecat fugiat aliqua.Anim aute id magna aliqua ad ad non deserunt
+          sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat
+          veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad ad non
+          deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
+          fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad ad
+          non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad
+          ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad
+          ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad
+          ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad
+          ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad
+          ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad
+          ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad
+          ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad
+          ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad
+          ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.Anim aute id magna aliqua ad
+          ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+          amet fugiat veniam occaecat fugiat aliqua.
+        </div>
       </div>
     </div>
 
-    <div class="bg-white px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
+    <div class="bg-white">
       <div
         class="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl"
       >
         <h2
+          data-aos="flip-down"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
           class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl flex justify-center"
         >
           HOW WE DO IT
@@ -30,7 +65,14 @@
         <div
           class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12"
         >
-          <div v-for="post in posts" :key="post.title">
+          <div
+            v-for="(post, index) in posts"
+            :key="post.title"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            :data-aos-delay="600 * index"
+          >
             <a :href="post.href" class="mt-4 block">
               <p class="text-xl font-semibold text-gray-900">
                 {{ post.title }}
@@ -42,27 +84,36 @@
       </div>
     </div>
 
-    <div class="bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="bg-white">
+      <div class="mx-auto max-w-7xl">
         <div
-          class="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl"
+          class="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl flex flex-col"
         >
           <h2
+            data-aos="flip-down"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
             class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl flex justify-center"
           >
             Meet our leadership
           </h2>
-          <p class="mt-6 text-lg leading-8 text-gray-600 flex justify-center">
+          <p
+            class="mt-12 pt-12 text-lg leading-8 text-gray-600 flex justify-center"
+          >
             We’re a dynamic group of individuals who are passionate about what
             we do and dedicated to delivering the best results for our clients.
           </p>
         </div>
         <ul
           role="list"
-          class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
+          class="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
         >
           <li
-            v-for="person in people"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            :data-aos-delay="600 * index"
+            v-for="(person, index) in people"
             :key="person.name"
             class="flex flex-col gap-6 xl:flex-row"
           >

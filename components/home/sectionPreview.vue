@@ -1,5 +1,8 @@
 <template>
   <div class="relative isolate bg-white">
+    <!-- <div id="phoneAnimation">
+      <div data-depth="0.2">test</div>
+    </div> -->
     <svg
       class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
       aria-hidden="true"
@@ -71,8 +74,12 @@
           >
         </div>
       </div>
-      <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+      <div
+        id="phoneAnimation"
+        class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow"
+      >
         <svg
+          data-depth="0.6"
           viewBox="0 0 366 729"
           role="img"
           class="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
@@ -122,4 +129,14 @@ const navigation = [
 ];
 
 const mobileMenuOpen = ref(false);
+
+onMounted(async () => {
+  if (process.client) {
+    const Parallax = (await import("parallax-js")).default;
+
+    const scene = document.getElementById("phoneAnimation");
+
+    new Parallax(scene, { clipRelativeInput: true });
+  }
+});
 </script>

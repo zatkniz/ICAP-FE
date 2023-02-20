@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-white my-8">
+  <div class="relative bg-white my-24">
     <div class="lg:absolute lg:inset-0">
       <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
