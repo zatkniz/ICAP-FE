@@ -1,5 +1,15 @@
 <template>
   <div
+    @aos:in=""
+    data-aos-id="anim"
+    data-aos="fade"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"
     class="bg-gray-50 pt-12 sm:pt-16 min-h-[80vh] flex flex-col justify-center"
   >
     <!-- <h1 id="target"></h1> -->
@@ -51,4 +61,14 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script setup>
+onMounted(async () => {
+  if (process.client) {
+    const test = () => {
+      console.log("test");
+    };
+
+    document.addEventListener("aos:in", test());
+  }
+});
+</script>

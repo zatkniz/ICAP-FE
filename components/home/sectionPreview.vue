@@ -1,8 +1,5 @@
 <template>
   <div class="relative isolate bg-white">
-    <!-- <div id="phoneAnimation">
-      <div data-depth="0.2">test</div>
-    </div> -->
     <svg
       class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
       aria-hidden="true"
@@ -37,27 +34,13 @@
       class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40"
     >
       <div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-        <div class="flex">
-          <div
-            class="relative flex items-center gap-x-4 rounded-full py-1 px-4 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
-          >
-            <span class="font-semibold text-indigo-600">We’re hiring</span>
-            <span class="h-4 w-px bg-gray-900/10" aria-hidden="true" />
-            <a href="#" class="flex items-center gap-x-1">
-              <span class="absolute inset-0" aria-hidden="true" />
-              See open positions
-              <ChevronRightIcon
-                class="-mr-2 h-5 w-5 text-gray-400"
-                aria-hidden="true"
-              />
-            </a>
-          </div>
+        <div>
+          <h1 class="text-4xl font-bold text-gray-900 sm:text-6xl">
+            <div class="text-blue-700">We Provide:</div>
+
+            <span id="typed">Digital Strategy.</span>
+          </h1>
         </div>
-        <h1
-          class="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
-        >
-          A better way to ship your projects
-        </h1>
         <p class="mt-6 text-lg leading-8 text-gray-600">
           Esse id magna consectetur fugiat non dolor in ad laboris magna laborum
           ea consequat. Nisi irure aliquip nisi adipisicing veniam voluptate id.
@@ -115,11 +98,12 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from "vue";
 import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { ChevronRightIcon } from "@heroicons/vue/20/solid";
+import TypeIt from "typeit";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -137,6 +121,25 @@ onMounted(async () => {
     const scene = document.getElementById("phoneAnimation");
 
     new Parallax(scene, { clipRelativeInput: true });
+
+    new (TypeIt as any)("#typed", {
+      speed: 50,
+      waitUntilVisible: false,
+    })
+      .pause(1200)
+      .move(-1)
+      .delete(8, { delay: 800, speed: 10 })
+      .pause(500)
+      .type("Marketing", { delay: 500 })
+      .pause(1200)
+      .delete(17, { delay: 800, speed: 10 })
+      .type("Social Media")
+      .pause(1200)
+      .delete(12, { delay: 800, speed: 10 })
+      .pause(500)
+      .type("Growth Hacking")
+
+      .go();
   }
 });
 </script>
