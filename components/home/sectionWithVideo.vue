@@ -60,11 +60,7 @@
         data-aos-offset="500"
         class="mx-auto max-w-2xl lg:mx-0"
       >
-        <iframe
-          width="420"
-          height="315"
-          :src="videoSectionOptions.acf.video_url"
-        >
+        <iframe width="420" height="315" :src="optionsForIndex?.acf?.video_url">
         </iframe>
       </div>
 
@@ -76,14 +72,15 @@
         class="text-white flex flex-col gap-2 justify-center items-center"
       >
         <h5 class="font-bold text-2xl">
-          {{ videoSectionOptions.acf.video_title }}
+          {{ optionsForIndex?.acf?.video_title }}
         </h5>
 
         <nuxt-link
           to="/services"
           class="text-base font-semibold leading-7 text-white flex justify-center"
-          >{{ videoSectionOptions.acf.video_description }} →</nuxt-link
         >
+          {{ optionsForIndex?.acf?.video_description }} →
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -97,9 +94,7 @@ import {
 } from "@heroicons/vue/20/solid";
 import axios from "@/helpers/axios";
 
-const { data } = await axios.get("dmp");
-
-const [, videoSectionOptions] = data;
+const { optionsForIndex } = useOptions();
 
 const cards = [
   {

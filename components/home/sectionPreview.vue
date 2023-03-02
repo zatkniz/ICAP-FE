@@ -19,7 +19,7 @@
           data-aos-delay="50"
           data-aos-duration="1000"
         >
-          {{ previewOptions.acf?.hero_text }}
+          {{ optionsForIndex?.acf?.hero_text }}
         </p>
         <div
           class="mt-10 flex items-center gap-x-6"
@@ -85,9 +85,7 @@
 import TypeIt from "typeit";
 import axios from "@/helpers/axios";
 
-const { data } = await axios.get("dmp");
-
-const [, previewOptions] = data;
+const { optionsForIndex } = useOptions();
 
 onMounted(async () => {
   if (process.client) {

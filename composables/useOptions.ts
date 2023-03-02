@@ -1,4 +1,5 @@
 import axios from "@/helpers/axios";
+import { IndexOptions } from "~~/interfaces/Index-options";
 
 export default function () {
   const optionsForIndex = useState("optionsForIndex");
@@ -8,6 +9,7 @@ export default function () {
     const { data } = await axios.get("dmp");
 
     [, optionsForIndex.value] = data;
+    console.log("optionsForIndex.value", optionsForIndex.value);
   };
 
   const setOptionsForEmployees = async () => {
