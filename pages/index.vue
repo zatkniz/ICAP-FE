@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <main>
+    <main class="bg-purple-500">
       <HomeSectionPreview />
       <HomeSectionWithVideo />
       <HomeSectionStats />
