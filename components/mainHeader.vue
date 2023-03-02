@@ -30,7 +30,7 @@
               <nuxt-link
                 active-class="text-black bg-gray-300/30"
                 :to="item.href"
-                class="font-semibold text-sm text-gray-600 py-2 px-3 hover:bg-gray-300/50 rounded-md hover:text-black transition-all hover:transition-all"
+                class="font-semibold text-sm text-white py-2 px-3 hover:bg-gray-300/50 rounded-md hover:text-black transition-all hover:transition-all"
               >
                 {{ item.name }}
               </nuxt-link>
@@ -79,15 +79,6 @@
               </svg>
             </button>
           </div>
-          <a
-            class="inline-flex justify-center rounded-lg border py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm outline-2 outline-offset-2 transition-colors border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 active:text-gray-700/80 hidden lg:block"
-            href="/login"
-            >Log in</a
-          ><a
-            class="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-semibold outline-2 outline-offset-2 transition-colors bg-gray-800 text-white hover:bg-gray-900 active:bg-gray-800 active:text-white/80 hidden lg:block"
-            href="/#"
-            >Download</a
-          >
         </div>
       </div>
     </nav>
