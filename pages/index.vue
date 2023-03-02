@@ -10,3 +10,9 @@
 <script lang="ts" setup>
 import TypeIt from "typeit";
 </script>
+
+<style>
+#__nuxt {
+  @apply bg-purple-500;
+}
+</style>
