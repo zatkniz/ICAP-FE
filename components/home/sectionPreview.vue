@@ -42,9 +42,7 @@
           </h1>
         </div>
         <p class="mt-6 text-lg leading-8 text-gray-600">
-          Esse id magna consectetur fugiat non dolor in ad laboris magna laborum
-          ea consequat. Nisi irure aliquip nisi adipisicing veniam voluptate id.
-          In veniam incididunt ex veniam adipisicing sit.
+          {{ previewOptions.acf?.hero_text }}
         </p>
         <div class="mt-10 flex items-center gap-x-6">
           <a
@@ -104,6 +102,11 @@ import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { ChevronRightIcon } from "@heroicons/vue/20/solid";
 import TypeIt from "typeit";
+import axios from "@/helpers/axios";
+
+const { data } = await axios.get("dmp");
+
+const [, previewOptions] = data;
 
 const navigation = [
   { name: "Product", href: "#" },

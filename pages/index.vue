@@ -7,6 +7,4 @@
     </main>
   </div>
 </template>
-<script lang="ts" setup>
-import TypeIt from "typeit";
-</script>
+<script lang="ts" setup></script>
