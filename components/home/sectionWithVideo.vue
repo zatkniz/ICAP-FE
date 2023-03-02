@@ -63,7 +63,7 @@
         <iframe
           width="420"
           height="315"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&controls=0"
+          :src="videoSectionOptions.acf.video_url"
         >
         </iframe>
       </div>
@@ -75,12 +75,14 @@
         data-aos-offset="500"
         class="text-white flex flex-col gap-2 justify-center items-center"
       >
-        <h5 class="font-bold text-2xl">THE MARKETING BEHIND THE EXPERTS</h5>
+        <h5 class="font-bold text-2xl">
+          {{ videoSectionOptions.acf.video_title }}
+        </h5>
 
         <nuxt-link
           to="/services"
           class="text-base font-semibold leading-7 text-white flex justify-center"
-          >Meet our team →</nuxt-link
+          >{{ videoSectionOptions.acf.video_description }} →</nuxt-link
         >
       </div>
     </div>
@@ -93,6 +95,11 @@ import {
   NewspaperIcon,
   PhoneIcon,
 } from "@heroicons/vue/20/solid";
+import axios from "@/helpers/axios";
+
+const { data } = await axios.get("dmp");
+
+const [, videoSectionOptions] = data;
 
 const cards = [
   {

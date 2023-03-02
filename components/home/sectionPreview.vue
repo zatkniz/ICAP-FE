@@ -19,9 +19,7 @@
           data-aos-delay="50"
           data-aos-duration="1000"
         >
-          Esse id magna consectetur fugiat non dolor in ad laboris magna laborum
-          ea consequat. Nisi irure aliquip nisi adipisicing veniam voluptate id.
-          In veniam incididunt ex veniam adipisicing sit.
+          {{ previewOptions.acf?.hero_text }}
         </p>
         <div
           class="mt-10 flex items-center gap-x-6"
@@ -33,7 +31,6 @@
             href="#"
             class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >Get started</a
-          >
           >
           <a href="#" class="text-base font-semibold leading-7 text-gray-900"
             >Learn more <span aria-hidden="true">→</span></a
@@ -86,6 +83,11 @@
 
 <script lang="ts" setup>
 import TypeIt from "typeit";
+import axios from "@/helpers/axios";
+
+const { data } = await axios.get("dmp");
+
+const [, previewOptions] = data;
 
 onMounted(async () => {
   if (process.client) {

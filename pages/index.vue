@@ -8,7 +8,14 @@
   </div>
 </template>
 <script lang="ts" setup>
-import TypeIt from "typeit";
+const { setOptionsForEmployees, setOptionsForIndex } = useOptions();
+
+const fetch = () => {
+  setOptionsForIndex();
+  setOptionsForEmployees();
+};
+
+fetch();
 </script>
 
 <style>
