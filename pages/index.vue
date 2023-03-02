@@ -7,4 +7,13 @@
     </main>
   </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { setOptionsForEmployees, setOptionsForIndex } = useOptions();
+
+const fetch = () => {
+  setOptionsForIndex();
+  setOptionsForEmployees();
+};
+
+fetch();
+</script>
