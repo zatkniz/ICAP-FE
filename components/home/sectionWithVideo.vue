@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative isolate overflow-hidden bg-purple-500 md:py-64 py-32 flex items-center"
+    class="relative isolate main-bg-color md:py-64 py-32 flex flex-col items-center"
   >
     <svg
       viewBox="0 0 1097 845"
@@ -50,15 +50,22 @@
         </linearGradient>
       </defs>
     </svg>
+
     <div
       class="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row justify-between gap-6 w-full"
     >
+      <img
+        id="thumbnail"
+        src="images/bg-arrow.png"
+        alt=""
+        class="absolute -top-[10vh] left-[-10vw] w-[80vw] z-10 opacity-50"
+      />
+
       <div
         data-aos="fade-right"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
-        data-aos-offset="500"
-        class="mx-auto max-w-2xl lg:mx-0"
+        class="mx-auto max-w-2xl lg:mx-0 flex flex-row z-20"
       >
         <iframe width="420" height="315" :src="optionsForIndex?.acf?.video_url">
         </iframe>
@@ -68,7 +75,6 @@
         data-aos="fade-left"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
-        data-aos-offset="500"
         class="text-white flex flex-col gap-2 justify-center items-center"
       >
         <h5 class="font-bold text-2xl">

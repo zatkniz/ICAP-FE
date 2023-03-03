@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white">
+  <div class="bg-white -z-10">
     <div class="mx-auto w-full">
       <div
         class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center shadow-2xl"

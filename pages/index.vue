@@ -1,9 +1,18 @@
 <template>
   <div class="w-full">
-    <main class="bg-purple-500">
-      <HomeSectionPreview />
+    <main>
+      <HomeSectionPreview
+        data-aos="slide-left"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      />
+
       <HomeSectionWithVideo />
-      <HomeSectionStats />
+      <HomeSectionStats
+        data-aos="slide-right"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      />
     </main>
   </div>
 </template>
@@ -20,6 +29,12 @@ fetch();
 
 <style>
 #__nuxt {
-  @apply bg-purple-500;
+  background: rgb(128, 55, 196);
+  background: linear-gradient(
+    267deg,
+    rgba(128, 55, 196, 1) 0%,
+    rgba(195, 54, 239, 1) 55%,
+    rgba(128, 55, 196, 1) 100%
+  );
 }
 </style>

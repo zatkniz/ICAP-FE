@@ -5,3 +5,28 @@
 .animate-spin-reverse-slower {
   animation: spin-reverse 6s linear infinite;
 }
+
+body {
+  background: rgb(128, 55, 196);
+  background: linear-gradient(
+    267deg,
+    rgba(128, 55, 196, 1) 0%,
+    rgba(195, 54, 239, 1) 55%,
+    rgba(128, 55, 196, 1) 100%
+  );
+  @apply overflow-x-hidden;
+}
+
+.height-hero-section {
+  min-height: calc(100vh - 200px);
+}
+
+.main-bg-color {
+  background: rgb(128, 55, 196);
+  background: linear-gradient(
+    267deg,
+    rgba(128, 55, 196, 1) 0%,
+    rgba(195, 54, 239, 1) 55%,
+    rgba(128, 55, 196, 1) 100%
+  );
+}

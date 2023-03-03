@@ -2,14 +2,13 @@ import axios from "@/helpers/axios";
 import { IndexOptions } from "~~/interfaces/Index-options";
 
 export default function () {
-  const optionsForIndex = useState("optionsForIndex");
+  const optionsForIndex = useState<IndexOptions>("optionsForIndex");
   const optionsForEmployees = useState("optionsForEmployees");
 
   const setOptionsForIndex = async () => {
-    const { data } = await axios.get("dmp");
+    const { data } = await axios.get("dmp/11?acf_format=standard");
 
-    [, optionsForIndex.value] = data;
-    console.log("optionsForIndex.value", optionsForIndex.value);
+    optionsForIndex.value = data;
   };
 
   const setOptionsForEmployees = async () => {
