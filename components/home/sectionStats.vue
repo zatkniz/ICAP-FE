@@ -19,7 +19,7 @@
     <div class="mt-10 bg-white pb-12 sm:pb-16">
       <div class="relative">
         <div class="absolute inset-0 h-1/2 bg-gray-50" />
-        <div class="relative max-w-7xl pr-12 pl-4">
+        <div class="relative max-w-7xl pr-12 pl-4 bg-gray-50">
           <div class="flex flex-row gap-3 w-full">
             <img
               :src="optionsForIndex.acf.number_image"
