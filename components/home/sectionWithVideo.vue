@@ -56,7 +56,7 @@
     >
       <img
         id="thumbnail"
-        src="images/bg-arrow.png"
+        src="/images/bg-arrow.png"
         alt=""
         class="absolute -top-[10vh] left-[-10vw] w-[80vw] z-10 opacity-50"
       />
