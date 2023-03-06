@@ -84,8 +84,8 @@
         <nuxt-link
           to="/services"
           class="text-base font-semibold leading-7 text-white flex justify-center"
-          v-html="optionsForIndex.acf.video_description"
-        >
+          >{{ optionsForIndex.acf.video_description }}
+          <span aria-hidden="true"> → </span>
         </nuxt-link>
       </div>
     </div>

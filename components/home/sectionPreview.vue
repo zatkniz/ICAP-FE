@@ -32,13 +32,15 @@
           data-aos-delay="1250"
           data-aos-duration="1000"
         >
-          <a
-            href="#"
+          <nuxt-link
+            to="contact-us"
             class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >Ας ξεκινήσουμε</a
+            >Ας ξεκινήσουμε</nuxt-link
           >
-          <a href="#" class="text-base font-semibold leading-7 text-gray-900"
-            >Μάθε περισσότερα <span aria-hidden="true">→</span></a
+          <nuxt-link
+            to="services"
+            class="text-base font-semibold leading-7 text-gray-900"
+            >Μάθε περισσότερα <span aria-hidden="true">→</span></nuxt-link
           >
         </div>
       </div>

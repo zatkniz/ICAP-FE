@@ -2,24 +2,21 @@
   <div
     class="bg-gray-50 pt-12 sm:pt-16 height-hero-section flex flex-col justify-center mr-6 md:mr-20 rounded-r-4xl shadow-2xl !z-50 -mb-12"
   >
-    <!-- <h1 id="target"></h1>
-    <Vue3Autocounter :startAmount="0" :endAmount="100" :duration="10" /> -->
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           {{ optionsForIndex.acf.number_title }}
         </h2>
-        <p
+        <div
           class="mt-3 text-xl text-gray-500 sm:mt-4"
           v-html="optionsForIndex.acf.number_description"
-        ></p>
+        ></div>
       </div>
     </div>
-    <div class="mt-10 bg-white pb-12 sm:pb-16">
+    <div class="mt-10 bg-gray-50 pb-12 sm:pb-16">
       <div class="relative">
         <div class="absolute inset-0 h-1/2 bg-gray-50" />
-        <div class="relative max-w-7xl pr-12 pl-4 bg-gray-50">
+        <div class="relative pr-12 pl-4 bg-gray-50">
           <div class="flex flex-row gap-3 w-full">
             <img
               :src="optionsForIndex.acf.number_image"
