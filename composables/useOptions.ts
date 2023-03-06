@@ -6,9 +6,9 @@ export default function () {
   const optionsForEmployees = useState("optionsForEmployees");
 
   const setOptionsForIndex = async () => {
-    const { data } = await axios.get("dmp/11?acf_format=standard");
+    const { data } = await axios.get("dmp?acf_format=standard");
 
-    optionsForIndex.value = data;
+    optionsForIndex.value = data[1];
   };
 
   const setOptionsForEmployees = async () => {

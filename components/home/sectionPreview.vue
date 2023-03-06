@@ -11,19 +11,21 @@
           data-aos-delay="1250"
           data-aos-duration="1000"
         >
+          <img :src="optionsForIndex.acf.hero_logo" alt="" />
           <h1 class="text-4xl font-bold text-gray-900 sm:text-6xl">
-            <div class="text-blue-700">We Provide:</div>
+            <div class="text-blue-700">Προσφέρουμε:</div>
 
             <span id="typed"></span>
           </h1>
         </div>
-        <p
+
+        <div
           class="text-lg leading-8 text-gray-600"
           data-aos="flip-down"
           data-aos-delay="1250"
           data-aos-duration="1000"
-          v-html="optionsForIndex?.acf.hero_text"
-        ></p>
+          v-html="optionsForIndex.acf.hero_text"
+        ></div>
         <div
           class="flex flex-row gap-6 items-center"
           data-aos="fade-up"
@@ -33,10 +35,10 @@
           <a
             href="#"
             class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >Get started</a
+            >Ας ξεκινήσουμε</a
           >
           <a href="#" class="text-base font-semibold leading-7 text-gray-900"
-            >Learn more <span aria-hidden="true">→</span></a
+            >Μάθε περισσότερα <span aria-hidden="true">→</span></a
           >
         </div>
       </div>
@@ -47,7 +49,7 @@
         data-aos-delay="50"
         data-aos-duration="1000"
       >
-        <img :src="optionsForIndex?.acf?.hero_image" alt="" />
+        <img :src="optionsForIndex.acf.hero_image" alt="" />
       </div>
     </div>
   </div>
@@ -58,11 +60,6 @@ import TypeIt from "typeit";
 import axios from "@/helpers/axios";
 
 const { optionsForIndex } = useOptions();
-
-const customImage = ref();
-if (optionsForIndex?.acf?.hero_image) {
-  customImage.value = optionsForIndex?.acf?.hero_image;
-}
 
 onMounted(async () => {
   if (process.client) {

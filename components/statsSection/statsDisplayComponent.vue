@@ -1,7 +1,7 @@
 <template>
   <div
     id="myElement"
-    class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
+    class="flex flex-col items-center justify-center border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
   >
     <h3 class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
       {{ title }}
@@ -16,28 +16,32 @@
 <script lang="ts" setup>
 import { CountUp } from "countup.js";
 import { ref } from "vue";
+const { numberSectionVisible } = useNumberSectionVisible();
 
 const props = defineProps({
   title: {
     type: String,
     required: true,
+    default: () => "",
   },
   unit: {
     type: String,
     required: true,
+    default: () => "",
   },
   number: {
-    type: Number,
+    type: String,
     required: true,
+    default: () => "0",
   },
   id: {
     type: String,
     required: true,
   },
   timerAmount: {
-    type: Number,
+    type: String,
     required: false,
-    default: 10,
+    default: "",
   },
 });
 const myElement = ref(null);
@@ -47,12 +51,16 @@ onMounted(async () => {
     const test = ref(document.getElementById("myElement"));
 
     const timer = new CountUp(props.id, props.number, {
-      duration: props.timerAmount,
+      duration: 5,
     });
 
-    if (test.value) {
-      timer.start();
-    }
+    watch(numberSectionVisible, () => {
+      if (numberSectionVisible.value) {
+        timer.start();
+      }
+    });
+
+    // const timer = new CountUp(props.id, props.number, {
   }
 });
 </script>

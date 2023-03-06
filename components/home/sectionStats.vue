@@ -8,47 +8,53 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          {{ optionsForIndex?.acf?.number_title }}
+          {{ optionsForIndex.acf.number_title }}
         </h2>
-        <p class="mt-3 text-xl text-gray-500 sm:mt-4">
-          {{ optionsForIndex?.acf?.number_description }}
-        </p>
+        <p
+          class="mt-3 text-xl text-gray-500 sm:mt-4"
+          v-html="optionsForIndex.acf.number_description"
+        ></p>
       </div>
     </div>
     <div class="mt-10 bg-white pb-12 sm:pb-16">
       <div class="relative">
         <div class="absolute inset-0 h-1/2 bg-gray-50" />
-        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-4xl">
-            <dl
-              class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3"
+        <div class="relative max-w-7xl pr-12 pl-4">
+          <div class="flex flex-row gap-3 w-full">
+            <img
+              :src="optionsForIndex.acf.number_image"
+              alt=""
+              class="w-[15vw]"
+            />
+            <div
+              class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3 w-full"
               data-aos="fade"
               data-aos-delay="50"
               data-aos-duration="1000"
               data-aos-once="true"
             >
               <StatsDisplayComponent
-                :title="optionsForIndex?.acf?.first_text"
-                :unit="optionsForIndex?.acf?.first_symbol"
-                :number="optionsForIndex?.acf?.first_number"
+                :title="optionsForIndex.acf.first_text"
+                :unit="optionsForIndex.acf.first_symbol"
+                :number="optionsForIndex.acf.first_number"
                 id="efficiency"
               />
 
               <StatsDisplayComponent
-                :title="optionsForIndex?.acf?.second_text"
-                :unit="optionsForIndex?.acf?.second_symbol"
-                :number="optionsForIndex?.acf?.second_number"
+                :title="optionsForIndex.acf.second_text"
+                :unit="optionsForIndex.acf.second_symbol"
+                :number="optionsForIndex.acf.second_number"
                 id="projects"
               />
 
               <StatsDisplayComponent
-                :title="optionsForIndex?.acf?.third_text"
-                :unit="optionsForIndex?.acf?.third_symbol"
-                :number="optionsForIndex?.acf?.third_number"
+                :title="optionsForIndex.acf.third_text"
+                :unit="optionsForIndex.acf.third_symbol"
+                :number="optionsForIndex.acf.third_number"
                 id="advertisements"
-                :timerAmount="5"
+                :timerAmount="'5'"
               />
-            </dl>
+            </div>
           </div>
         </div>
       </div>
@@ -63,9 +69,7 @@ const { optionsForIndex } = useOptions();
 
 onMounted(async () => {
   if (process.client) {
-    const test = () => {};
-
-    document.addEventListener("aos:in", test());
+    document.addEventListener("aos:in");
   }
 });
 </script>

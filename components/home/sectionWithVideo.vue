@@ -67,7 +67,7 @@
         data-aos-easing="ease-in-out"
         class="mx-auto max-w-2xl lg:mx-0 flex flex-row z-20"
       >
-        <iframe width="420" height="315" :src="optionsForIndex?.acf?.video_url">
+        <iframe width="420" height="315" :src="optionsForIndex.acf.video_url">
         </iframe>
       </div>
 
@@ -75,17 +75,17 @@
         data-aos="fade-left"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
-        class="text-white flex flex-col gap-2 justify-center items-center"
+        class="text-white flex flex-col gap-2 justify-center items-center z-20"
       >
         <h5 class="font-bold text-2xl">
-          {{ optionsForIndex?.acf?.video_title }}
+          {{ optionsForIndex.acf.video_title }}
         </h5>
 
         <nuxt-link
           to="/services"
           class="text-base font-semibold leading-7 text-white flex justify-center"
+          v-html="optionsForIndex.acf.video_description"
         >
-          {{ optionsForIndex?.acf?.video_description }} →
         </nuxt-link>
       </div>
     </div>

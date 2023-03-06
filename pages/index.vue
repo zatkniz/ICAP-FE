@@ -9,6 +9,7 @@
 
       <HomeSectionWithVideo />
       <HomeSectionStats
+        ref="target"
         data-aos="slide-right"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
@@ -17,14 +18,18 @@
   </div>
 </template>
 <script lang="ts" setup>
-const { setOptionsForEmployees, setOptionsForIndex } = useOptions();
+import { useIntersectionObserver } from "@vueuse/core";
 
-const fetch = () => {
-  setOptionsForIndex();
-  setOptionsForEmployees();
-};
+const { setNumberSectionVisible } = useNumberSectionVisible();
 
-fetch();
+const target = ref();
+
+const { stop } = useIntersectionObserver(
+  target,
+  ([{ isIntersecting }], observerElement) => {
+    setNumberSectionVisible(isIntersecting);
+  }
+);
 </script>
 
 <style>
