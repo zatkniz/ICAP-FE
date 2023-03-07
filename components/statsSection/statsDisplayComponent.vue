@@ -8,7 +8,7 @@
     </h3>
 
     <div class="order-1 text-5xl font-bold tracking-tight text-indigo-600">
-      <span :id="props.id"></span> {{ unit }}
+      <span :id="props.id"> {{ number }} </span> {{ unit }}
     </div>
   </div>
 </template>
@@ -50,7 +50,7 @@ onMounted(async () => {
   if (process.client) {
     const test = ref(document.getElementById("myElement"));
 
-    const timer = new CountUp(props.id, props.number, {
+    const timer = new CountUp(props.id, props.number as any, {
       duration: 5,
     });
 
@@ -59,8 +59,6 @@ onMounted(async () => {
         timer.start();
       }
     });
-
-    // const timer = new CountUp(props.id, props.number, {
   }
 });
 </script>

@@ -7,7 +7,7 @@
         <div class="relative z-10 flex items-center gap-16">
           <nuxt-link to="/">
             <img
-              :src="optionsForIndex.acf.hero_logo"
+              :src="optionsForHeader?.acf?.header_logo"
               class="w-[200px]"
               alt=""
             />
@@ -56,23 +56,23 @@
 </template>
 
 <script lang="ts" setup>
-const { optionsForIndex } = useOptions();
+const { optionsForIndex, optionsForHeader } = useOptions();
 
 const route = useRoute();
 
 const navBarOption = {
   home: {
-    name: "Home",
+    name: optionsForHeader?.value?.acf?.home_button_text,
     href: "/",
     id: 1,
   },
   services: {
-    name: "Services",
+    name: optionsForHeader?.value?.acf?.services_button_text,
     href: "/services",
     id: 2,
   },
   contactUs: {
-    name: "Contact Us",
+    name: optionsForHeader?.value?.acf?.contact_button_text,
     href: "/contact-us",
     id: 3,
   },

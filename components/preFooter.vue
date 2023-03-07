@@ -7,24 +7,24 @@
         <h2
           class="mx-auto max-w-2xl text-4xl font-bold tracking-tight text-white"
         >
-          Boost your productivity today.
+          {{ optionsForPreFooter?.acf?.pre_footer_title }}
         </h2>
-        <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-          Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim
-          id veniam aliqua proident excepteur commodo do ea.
-        </p>
+        <div
+          v-html="optionsForPreFooter?.acf?.pre_footer_description"
+          class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300"
+        ></div>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <nuxt-link
             v-if="route.path !== '/contact-us'"
             to="/contact-us"
             class="rounded-md bg-white px-3.5 py-1.5 text-base font-semibold leading-7 text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >Contact us</nuxt-link
+            >Επικοινωνία</nuxt-link
           >
           <nuxt-link
             v-if="route.path !== '/services'"
             to="/services"
             class="text-base font-semibold leading-7 text-white"
-            >Our services →</nuxt-link
+            >Οι υπηρεσίες μας →</nuxt-link
           >
         </div>
         <svg
@@ -51,5 +51,6 @@
   </div>
 </template>
 <script lang="ts" setup>
+const { optionsForPreFooter } = useOptions();
 const route = useRoute();
 </script>
