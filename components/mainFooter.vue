@@ -109,7 +109,7 @@
         </form>
         <p class="mt-6 text-sm text-gray-500 md:mt-0">
           © Copyright
-          <!-- -->2023<!-- -->. All rights reserved.
+          {{ year }}. All rights reserved.
         </p>
       </div>
     </div>
@@ -117,6 +117,10 @@
 </template>
 
 <script lang="ts" setup>
+import moment from "moment-with-locales-es6";
+
+const year = moment().format("YYYY");
+
 const { optionsForIndex, optionsForFooter } = useOptions();
 
 const footerInformation = [
