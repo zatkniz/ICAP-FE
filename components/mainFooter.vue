@@ -108,8 +108,7 @@
           </button>
         </form>
         <p class="mt-6 text-sm text-gray-500 md:mt-0">
-          © Copyright
-          {{ year }}. All rights reserved.
+          © Copyright 2023. All rights reserved.
         </p>
       </div>
     </div>
@@ -119,7 +118,7 @@
 <script lang="ts" setup>
 import moment from "moment-with-locales-es6";
 
-const year = moment().format("YYYY");
+// const year = moment().format("YYYY");
 
 const { optionsForIndex, optionsForFooter } = useOptions();
 
