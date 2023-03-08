@@ -19,9 +19,9 @@ export default function () {
   };
 
   const setOptionsForEmployees = async () => {
-    const { data } = await axios.get("team_member");
+    const { data } = await axios.get("team_member?acf_format=standard");
 
-    [, optionsForEmployees.value] = data;
+    optionsForEmployees.value = data;
   };
 
   const setOptionsForHeader = async () => {

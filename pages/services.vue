@@ -1,8 +1,12 @@
 <template>
-  <div
-    class="flex flex-col items-center justify-center gap-24 max-w-7xl py-24 px-2 lg:px-6"
-  >
-    <div class="bg-transparent">
+  <div class="w-full">
+    <ServicesOurServices />
+
+    <ServicesHowWeDoIt />
+
+    <ServicesMeetOurPeople />
+
+    <!-- <div class="bg-white">
       <div
         class="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl"
       >
@@ -47,9 +51,9 @@
           amet fugiat veniam occaecat fugiat aliqua.
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="bg-transparent">
+    <!-- <div class="bg-transparent">
       <div
         class="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl"
       >
@@ -82,9 +86,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="bg-transparent">
+    <!-- <div class="bg-transparent">
       <div class="mx-auto max-w-7xl">
         <div
           class="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl flex flex-col"
@@ -136,7 +140,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
