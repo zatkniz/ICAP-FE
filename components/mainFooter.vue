@@ -5,19 +5,22 @@
         class="flex flex-col items-start justify-between gap-y-12 pt-16 pb-6 lg:flex-row lg:py-16"
       >
         <div class="flex flex-col gap-4 w-1/3">
-          <div class="flex items-center text-gray-900">
+          <div class="flex flex-row gap-2 items-center text-gray-900">
             <img
-              :src="optionsForFooter?.acf.footer_logo"
-              class="w-[15vw]"
+              :src="optionsForFooter?.acf?.footer_logo"
+              class="w-[12vw]"
+              alt=""
+            />
+            <img
+              :src="optionsForFooter?.acf.second_logo"
+              class="w-[12vw]"
               alt=""
             />
           </div>
-          <div class="text-gray-700">
-            Η ICAP CRIF, με μια πετυχημένη διαδρομή 59 χρόνων και παρουσία σε
-            Ελλάδα, Ρουμανία Βουλγαρία και Κύπρο, είναι ο κορυφαίος Όμιλος
-            Εταιρειών στην αγορά Λύσεων Πιστωτικού Κινδύνου και Επιχειρηματικής
-            Πληροφόρησης στην Νοτιοανατολική Ευρώπη.
-          </div>
+          <div
+            class="text-gray-700"
+            v-html="optionsForFooter.acf.description"
+          ></div>
           <!-- <nav class="mt-11 flex gap-8">
             <a
               class="relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]"

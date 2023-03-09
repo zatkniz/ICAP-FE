@@ -18,9 +18,9 @@
             Let's work together
           </h2>
           <p class="mt-4 text-lg text-gray-500 sm:mt-3">
-            We’d love to hear from you! Send us a message using the form
-            opposite, or email us. We’d love to hear from you! Send us a message
-            using the form opposite, or email us.
+            Θα χαρούμε πολύ να συνεργαστούμε μαζί σας! Στείλτε μας ένα μήνυμα
+            συμπληρώνοντας τη παρακάτω φόρμα ή επικοινωνήστε μαζί μας μέσω
+            τηλεφώνου.
           </p>
           <form
             action="#"
@@ -134,7 +134,8 @@
                 />
               </div>
             </div>
-            <fieldset class="sm:col-span-2">
+
+            <!-- <fieldset class="sm:col-span-2">
               <legend class="block text-sm font-medium text-gray-700">
                 Expected budget
               </legend>
@@ -192,7 +193,8 @@
                   </label>
                 </div>
               </div>
-            </fieldset>
+            </fieldset> -->
+
             <div class="sm:col-span-2">
               <label
                 for="how-did-you-hear-about-us"

@@ -8,7 +8,7 @@
           <nuxt-link to="/">
             <img
               :src="optionsForHeader?.acf?.header_logo"
-              class="w-[200px]"
+              class="w-64"
               alt=""
             />
           </nuxt-link>
@@ -17,7 +17,7 @@
               <nuxt-link
                 active-class="text-black bg-gray-300/30"
                 :to="item.href"
-                class="font-semibold text-sm text-white py-2 px-3 hover:bg-gray-300/50 rounded-md hover:text-black transition-all hover:transition-all"
+                class="font-semibold text-lg text-white py-2 px-3 hover:bg-gray-300/50 rounded-md hover:text-black transition-all hover:transition-all"
               >
                 {{ item.name }}
               </nuxt-link>

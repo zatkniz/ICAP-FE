@@ -11,7 +11,7 @@
         </h2>
         <div
           v-html="optionsForPreFooter?.acf?.pre_footer_description"
-          class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300"
+          class="mx-auto mt-2 max-w-xl text-lg leading-8 text-gray-300"
         ></div>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <nuxt-link

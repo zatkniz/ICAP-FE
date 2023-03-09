@@ -1,4 +1,4 @@
-export interface FooterOptions {
+export interface EmployeesOptions {
   acf: Acf;
   date: string;
   date_gmt: string;
@@ -17,10 +17,8 @@ export interface FooterOptions {
 }
 
 export interface Acf {
-  footer_logo: string;
-  second_logo: string;
+  full_name: string;
+  occupation: string;
+  image: string;
   description: string;
-  footer_phone_number: number;
-  footer_email: string;
-  footer_address: string;
 }

@@ -1,4 +1,4 @@
-export interface FooterOptions {
+export interface ServicesPageOptions {
   acf: Acf;
   date: string;
   date_gmt: string;
@@ -17,10 +17,7 @@ export interface FooterOptions {
 }
 
 export interface Acf {
-  footer_logo: string;
-  second_logo: string;
-  description: string;
-  footer_phone_number: number;
-  footer_email: string;
-  footer_address: string;
+  services_title: string;
+  employee_section_title: string;
+  employee_section_description: string;
 }

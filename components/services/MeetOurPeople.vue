@@ -2,7 +2,6 @@
   <div
     class="bg-gray-50 flex items-center p-20 flex-col justify-center mr-6 md:mr-20 rounded-r-4xl shadow-2xl !z-50 -mb-12"
   >
-    {{ optionsForEmployees?.acf }}
     <div class="mx-auto max-w-7xl">
       <div
         class="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl flex flex-col"
@@ -13,16 +12,17 @@
           data-aos-easing="ease-in-out"
           class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl flex justify-center"
         >
-          Meet our leadership
+          {{ optionsForServicesPage.acf.employee_section_title }}
         </h2>
-        <p
-          class="mt-12 pt-12 text-lg leading-8 text-gray-600 flex justify-center"
-        >
-          We’re a dynamic group of individuals who are passionate about what we
-          do and dedicated to delivering the best results for our clients.
-        </p>
+        <div
+          class="mt-12 pt-12 text-xl font-semibold leading-8 text-gray-600 flex justify-center"
+          v-html="optionsForServicesPage.acf.employee_section_description"
+        ></div>
       </div>
-      <ul role="list" class="grid grid-cols-2 gap-6 justify-between w-full">
+      <ul
+        role="list"
+        class="grid grid-cols-2 gap-12 justify-between w-full mt-12"
+      >
         <li
           data-aos="fade-down"
           data-aos-duration="1000"
@@ -34,19 +34,24 @@
         >
           <img
             class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-            :src="person.imageUrl"
+            :src="person.acf?.image"
             alt=""
           />
-          <div class="flex-auto">
-            <h3
-              class="text-lg font-semibold leading-8 tracking-tight text-gray-900"
-            >
-              {{ person.name }}
-            </h3>
-            <p class="text-base leading-7 text-gray-600">{{ person.role }}</p>
-            <p class="mt-6 text-base leading-7 text-gray-600">
-              {{ person.bio }}
-            </p>
+          <div class="flex flex-col">
+            <div class="flex flex-col">
+              <h3
+                class="text-lg font-semibold leading-8 tracking-tight text-gray-900"
+              >
+                {{ person?.acf?.full_name }}
+              </h3>
+              <p class="text-base leading-7 text-gray-600">
+                {{ person.acf?.occupation }}
+              </p>
+            </div>
+            <div
+              v-html="person.acf?.description"
+              class="mt-6 text-base leading-7 text-gray-600"
+            ></div>
           </div>
         </li>
       </ul>
@@ -54,28 +59,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-const { optionsForEmployees } = useOptions();
+const { optionsForEmployees, optionsForServicesPage } = useOptions();
 
-const people = [
-  {
-    name: optionsForEmployees.value?.acf?.full_name,
-    role: optionsForEmployees.value?.acf?.occupation,
-    imageUrl: optionsForEmployees.value?.acf?.image,
-    bio: optionsForEmployees.value?.acf?.description,
-  },
-  {
-    name: "Leonard Krasner",
-    role: "Senior Designer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    bio: "Quia illum aut in beatae. Possimus dolores aliquid accusantium aut in ut non assumenda. Enim iusto molestias aut deleniti eos aliquid magnam molestiae. At et non possimus ab. Magni labore molestiae nulla qui.",
-  },
-  {
-    name: "Leonard Krasner",
-    role: "Senior Designer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    bio: "Quia illum aut in beatae. Possimus dolores aliquid accusantium aut in ut non assumenda. Enim iusto molestias aut deleniti eos aliquid magnam molestiae. At et non possimus ab. Magni labore molestiae nulla qui.",
-  },
-];
+const people = optionsForEmployees.value;
 </script>

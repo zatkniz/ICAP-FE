@@ -13,7 +13,9 @@
         >
           <img :src="optionsForIndex.acf.hero_logo" alt="" />
           <h1 class="text-4xl font-bold text-gray-900 sm:text-6xl">
-            <div class="text-blue-700">Προσφέρουμε:</div>
+            <div class="text-blue-700">
+              {{ optionsForIndex.acf.hero_title }}
+            </div>
 
             <span id="typed"></span>
           </h1>
@@ -51,7 +53,7 @@
         data-aos-delay="50"
         data-aos-duration="1000"
       >
-        <img :src="optionsForIndex.acf.hero_image" alt="" />
+        <img class="w-max" :src="optionsForIndex.acf.hero_image" alt="" />
       </div>
     </div>
   </div>
@@ -77,22 +79,31 @@ onMounted(async () => {
       loop: true,
     })
       .pause(1800)
-      .type("Digital Strategy.", { delay: 500 })
+      .type("Social Media Strategy.", { delay: 500 })
       .pause(1200)
       .move(-1)
-      .delete(8, { delay: 800, speed: 10 })
+      .delete(22, { delay: 800, speed: 10 })
       .pause(500)
-      .type("Marketing", { delay: 500 })
+      .type("Digital Advertising", { delay: 500 })
       .pause(1200)
-      .delete(17, { delay: 800, speed: 10 })
-      .type("Social Media")
+      .delete(11, { delay: 800, speed: 10 })
+      .pause(800)
+      .type("Branding", { delay: 500 })
       .pause(1200)
-      .delete(12, { delay: 800, speed: 10 })
-      .pause(500)
-      .type("Growth Hacking")
+      .delete(16, { delay: 800, speed: 10 })
+      .pause(800)
+      .type("Social Media Management", { delay: 500 })
       .pause(1200)
+      .delete(23)
+      .pause(800)
+      .type("Content Creation", { delay: 500 })
+      .pause(1200)
+      .delete(16, { delay: 800, speed: 10 })
+      .pause(800)
+      .type("Technical Support Services", { delay: 500 })
+      .pause(1200)
+      .delete(27, { delay: 800, speed: 10 })
       .move(1)
-      .delete(100, { speed: 10 })
       .go();
   }
 });

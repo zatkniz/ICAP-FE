@@ -52,7 +52,7 @@
     </svg>
 
     <div
-      class="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row justify-between gap-6 w-full"
+      class="mx-auto max-w-7xl flex flex-col lg:flex-row justify-between gap-6 w-full"
     >
       <img
         id="thumbnail"
@@ -65,9 +65,9 @@
         data-aos="fade-right"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
-        class="mx-auto max-w-2xl lg:mx-0 flex flex-row z-20"
+        class="w-1/2 z-20"
       >
-        <iframe width="420" height="315" :src="optionsForIndex.acf.video_url">
+        <iframe width="540" height="315" :src="optionsForIndex.acf.video_url">
         </iframe>
       </div>
 
@@ -75,15 +75,15 @@
         data-aos="fade-left"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
-        class="text-white flex flex-col gap-2 justify-center items-center z-20"
+        class="text-white flex flex-col gap-2 justify-center items-center z-20 w-1/2"
       >
-        <h5 class="font-bold text-2xl">
+        <h5 class="font-bold text-4xl">
           {{ optionsForIndex.acf.video_title }}
         </h5>
 
         <nuxt-link
           to="/services"
-          class="text-base font-semibold leading-7 text-white flex justify-center"
+          class="text-base font-semibold leading-7 text-white text-center flex justify-center"
           >{{ optionsForIndex.acf.video_description }} →
         </nuxt-link>
       </div>

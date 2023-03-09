@@ -5,6 +5,8 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     setOptionsForHeader,
     setOptionsForPreFooter,
     setOptionsForFooter,
+    setOptionsForServices,
+    setOptionsForServicesPage,
   } = useOptions();
 
   await setOptionsForEmployees();
@@ -12,4 +14,6 @@ export default defineNuxtPlugin(async (nuxtApp) => {
   await setOptionsForHeader();
   await setOptionsForPreFooter();
   await setOptionsForFooter();
+  await setOptionsForServices();
+  await setOptionsForServicesPage();
 });
