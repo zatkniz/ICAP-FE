@@ -11,8 +11,8 @@
           :style="`--i: ${index + 1}`"
           data-id="content1"
           v-for="(item, index) in services"
-          :key="item.id"
-          :class="{ active1: item.id === selectedPost.id }"
+          :key="item?.id"
+          :class="{ active1: item?.id === selectedPost?.id }"
           @click="selectedPost = item"
         >
           <img
