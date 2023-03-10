@@ -75,16 +75,24 @@
         data-aos="fade-left"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
-        class="text-white flex flex-col gap-2 justify-center items-center z-20 w-1/2"
+        class="text-white flex flex-col gap-4 justify-center items-center z-20 w-1/2"
       >
-        <h5 class="font-bold text-4xl">
-          {{ optionsForIndex.acf.video_title }}
-        </h5>
+        <div class="flex flex-col gap-2 items-center">
+          <h5 class="font-bold text-4xl">
+            {{ optionsForIndex.acf.video_title }}
+          </h5>
+
+          <div
+            class="text-lg font-semibold leading-7 text-white text-center flex justify-center"
+          >
+            {{ optionsForIndex.acf.video_description }}
+          </div>
+        </div>
 
         <nuxt-link
           to="/services"
-          class="text-base font-semibold leading-7 text-white text-center flex justify-center"
-          >{{ optionsForIndex.acf.video_description }} →
+          class="text-base font-semibold leading-7 text-black text-center flex justify-center bg-white px-4 py-2 rounded-full shadow-md shadow-black/30 hover:shadow-lg hover:shadow-black/40 hover:scale-110 transition duration-150"
+          >Meet our team →
         </nuxt-link>
       </div>
     </div>

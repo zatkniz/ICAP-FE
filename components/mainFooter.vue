@@ -5,15 +5,17 @@
         class="flex flex-col items-start justify-between gap-y-12 pt-16 pb-6 lg:flex-row lg:py-16"
       >
         <div class="flex flex-col gap-4 w-1/3">
-          <div class="flex flex-row gap-2 items-center text-gray-900">
+          <div
+            class="flex flex-row justify-between gap-2 items-center text-gray-900"
+          >
             <img
               :src="optionsForFooter?.acf?.footer_logo"
-              class="w-[12vw]"
+              class="w-[14vw]"
               alt=""
             />
             <img
               :src="optionsForFooter?.acf.second_logo"
-              class="w-[12vw]"
+              class="w-[8vw]"
               alt=""
             />
           </div>
@@ -68,6 +70,17 @@
                 :to="item.link"
                 >{{ item.title }}
               </nuxt-link>
+            </div>
+            <div class="flex flex-row gap-2">
+              <div v-for="item in social" :key="item.id">
+                <nuxt-link target="_blank" :to="item.link">
+                  <component
+                    :is="item.icon"
+                    class="w-7 bg-transparent text-gray-400 p-2 rounded-lg hover:text-blue-700 transition duration-200 hover:scale-110"
+                    aria-hidden="true"
+                  />
+                </nuxt-link>
+              </div>
             </div>
           </div>
         </div>

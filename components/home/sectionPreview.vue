@@ -17,7 +17,7 @@
               {{ optionsForIndex.acf.hero_title }}
             </div>
 
-            <span id="typed"></span>
+            <div id="typed"></div>
           </h1>
         </div>
 
@@ -61,19 +61,19 @@
 
 <script lang="ts" setup>
 import TypeIt from "typeit";
-import axios from "@/helpers/axios";
 
 const { optionsForIndex } = useOptions();
-
-onMounted(async () => {
+const route = useRoute();
+const typeIt = ref();
+const initTyped = () => {
   if (process.client) {
-    const Parallax = (await import("parallax-js")).default;
+    // const Parallax = (await import("parallax-js")).default;
 
-    const scene = document.getElementById("phoneAnimation");
+    // const scene = document.getElementById("phoneAnimation");
 
-    new Parallax(scene, { clipRelativeInput: true });
+    // new Parallax(scene, { clipRelativeInput: true });
 
-    new (TypeIt as any)("#typed", {
+    typeIt.value = new (TypeIt as any)("#typed", {
       speed: 50,
       waitUntilVisible: false,
       loop: true,
@@ -106,5 +106,11 @@ onMounted(async () => {
       .move(1)
       .go();
   }
+};
+
+onMounted(async () => {
+  setTimeout(() => {
+    initTyped();
+  }, 1500);
 });
 </script>

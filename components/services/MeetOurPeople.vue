@@ -27,6 +27,7 @@
           data-aos="fade-down"
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
+          data-aos-offset="-200"
           :data-aos-delay="600 * index"
           v-for="(person, index) in people"
           :key="person.name"

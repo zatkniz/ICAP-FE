@@ -8,7 +8,7 @@
           {{ optionsForIndex.acf.number_title }}
         </h2>
         <div
-          class="mt-3 text-xl text-gray-500 sm:mt-4"
+          class="mt-3 text-2xl text-gray-500 sm:mt-4"
           v-html="optionsForIndex.acf.number_description"
         ></div>
       </div>

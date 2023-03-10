@@ -52,17 +52,13 @@ export default function () {
   };
 
   const setOptionsForServices = async () => {
-    const { data } = await axios.get(
-      "https://digital-marketing-admin.icapcrif.com/wp-json/wp/v2/services?acf_format=standard"
-    );
+    const { data } = await axios.get("services?acf_format=standard");
 
     optionsForServices.value = data;
   };
 
   const setOptionsForServicesPage = async () => {
-    const { data } = await axios.get(
-      "https://digital-marketing-admin.icapcrif.com/wp-json/wp/v2/dmp/161?acf_format=standard"
-    );
+    const { data } = await axios.get("dmp/161?acf_format=standard");
 
     optionsForServicesPage.value = data;
   };

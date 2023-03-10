@@ -20,4 +20,5 @@ export interface Acf {
   title: string;
   service_image: string;
   service_description: string;
+  service_description_extended: string;
 }

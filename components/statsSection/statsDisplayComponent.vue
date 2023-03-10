@@ -7,7 +7,9 @@
       {{ title }}
     </h3>
 
-    <div class="order-1 text-5xl font-bold tracking-tight text-indigo-600">
+    <div
+      class="text-4xl font-bold tracking-tight text-indigo-600 flex flex-row"
+    >
       <span :id="props.id"> {{ number }} </span> {{ unit }}
     </div>
   </div>

@@ -12,8 +12,8 @@
           data-id="content1"
           v-for="(item, index) in services"
           :key="item.id"
-          :class="{ active1: item.id === activeItem.id }"
-          @click="activeItem = item"
+          :class="{ active1: item.id === selectedPost.id }"
+          @click="selectedPost = item"
         >
           <img
             v-if="item.acf.service_image"
@@ -31,26 +31,32 @@
         </div>
       </div>
 
-      <div class="content1 flex justify-center items-center">
+      <div class="content1 flex justify-center items-center flex-col gap-2">
         <div
           class="text-black flex flex-col justify-start h-1/3 gap-2 w-2/3 divide-y-2 divide-gray-200"
         >
           <h1 class="flex justify-center text-3xl font-bold">
-            {{ activeItem.acf.title }}
+            {{ selectedPost.acf.title }}
           </h1>
           <div
             class="break-words text-center pt-2"
-            v-html="activeItem.acf.service_description"
+            v-html="selectedPost.acf.service_description"
           ></div>
         </div>
+        <nuxt-link class="z-[1000]" :to="`/${selectedPost.slug}`"
+          >Read more</nuxt-link
+        >
       </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
 const { optionsForServices } = useOptions();
+const { selectedPost } = useSelectedService();
 
-const activeItem = ref(optionsForServices.value[0]);
+if (selectedPost.value === null) {
+  selectedPost.value = optionsForServices.value[0];
+}
 const services = ref(optionsForServices);
 </script>
 
