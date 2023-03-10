@@ -54,9 +54,8 @@
 const { optionsForServices } = useOptions();
 const { selectedPost } = useSelectedService();
 
-if (selectedPost.value === null) {
-  selectedPost.value = optionsForServices.value[0];
-}
+selectedPost.value = optionsForServices.value[0];
+
 const services = ref(optionsForServices);
 </script>
 
