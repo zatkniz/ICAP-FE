@@ -74,23 +74,32 @@ onMounted(() => {
       },
     })
     .to("#flower", {
-      y: -300,
+      opacity: 0,
       scrollTrigger: {
-        markers: true,
         trigger: "#hero",
         scrub: 1,
         start: "bottom 7%",
       },
     })
     .to("#flower", {
-      y: 0,
+      opacity: 0,
+      duration: 0.01,
+      markers: true,
+      scrollTrigger: {
+        trigger: "#video",
+        scrub: true,
+        start: "top 15%",
+      },
+    })
+    .to("#flower", {
+      opacity: 1,
       x: width.value - 180,
       rotate: 720,
       ease: "power4.out",
-      duration: 1,
+      duration: 2,
       scrollTrigger: {
         trigger: "#stats",
-        scrub: 1,
+        scrub: true,
         pin: true,
         start: "center center",
       },

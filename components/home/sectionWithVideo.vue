@@ -1,5 +1,6 @@
 <template>
   <div
+    id="video"
     class="relative isolate main-bg-color md:py-64 py-32 flex flex-col items-center"
   >
     <svg
