@@ -1,5 +1,6 @@
 <template>
   <div
+    id="hero"
     class="bg-white ml-6 md:ml-20 rounded-l-4xl shadow-2xl z-50 height-hero-section flex"
   >
     <div

@@ -1,6 +1,7 @@
 <template>
   <div
-    class="bg-gray-50 px-20 pl-0 pt-0 height-hero-section flex flex-col justify-center mr-6 md:mr-20 rounded-r-4xl shadow-2xl !z-50 -mb-12"
+    id="stats"
+    class="bg-gray-50 pt-12 sm:pt-16 height-hero-section flex flex-col justify-center mr-6 md:mr-20 rounded-r-4xl shadow-2xl !z-50 -mb-12"
   >
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
@@ -73,8 +74,6 @@
 </template>
 
 <script setup>
-import axios from "@/helpers/axios";
-
 const { optionsForIndex } = useOptions();
 
 onMounted(async () => {
