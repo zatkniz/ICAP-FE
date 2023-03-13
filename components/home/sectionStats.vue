@@ -17,13 +17,13 @@
       <div class="relative">
         <div class="absolute inset-0 h-1/2 bg-gray-50" />
         <div class="relative bg-gray-50">
-          <div class="flex flex-row justify-between w-full">
+          <div class="flex flex-row justify-center items-center w-full">
             <img
               :src="optionsForIndex.acf.number_image"
               alt=""
               class="w-[25vw]"
             />
-            <div class="flex items-center w-full">
+            <div class="flex items-center">
               <div
                 class="rounded-lg bg-white shadow-lg flex flex-row gap-2 w-fit h-fit p-3"
                 data-aos="fade"
@@ -36,6 +36,7 @@
                   :unit="optionsForIndex.acf.first_symbol"
                   :number="optionsForIndex.acf.first_number"
                   id="efficiency"
+                  class="border-b border-gray-100 sm:border-0 sm:border-r"
                 />
 
                 <StatsDisplayComponent
@@ -43,6 +44,7 @@
                   :unit="optionsForIndex.acf.second_symbol"
                   :number="optionsForIndex.acf.second_number"
                   id="projects"
+                  class="border-b border-gray-100 sm:border-0 sm:border-r"
                 />
 
                 <StatsDisplayComponent
@@ -51,6 +53,7 @@
                   :number="optionsForIndex.acf.third_number"
                   id="advertisements"
                   :timerAmount="'5'"
+                  class="border-b border-gray-100 sm:border-0 sm:border-r"
                 />
 
                 <StatsDisplayComponent

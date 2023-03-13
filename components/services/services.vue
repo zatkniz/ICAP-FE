@@ -43,7 +43,7 @@
             v-html="selectedPost.acf.service_description"
           ></div>
         </div>
-        <nuxt-link class="z-[1000]" :to="`/${selectedPost.slug}`"
+        <nuxt-link class="z-[1000]" :to="`/services/${selectedPost.slug}`"
           >Read more</nuxt-link
         >
       </div>

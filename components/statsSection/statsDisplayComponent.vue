@@ -1,7 +1,7 @@
 <template>
   <div
     id="myElement"
-    class="flex flex-col w-fit items-center justify-center border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
+    class="flex flex-col w-fit items-center justify-center p-6 text-center"
   >
     <h3 class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
       {{ title }}

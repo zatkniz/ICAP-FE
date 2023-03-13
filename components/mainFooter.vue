@@ -46,9 +46,11 @@
 
         <div class="flex flex-col gap-4">
           <h1 class="font-bold text-lg">Επικοινωνία</h1>
-          <div
-            class="flex flex-row items-center gap-2 relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]"
+          <nuxt-link
+            :to="item.to"
+            class="flex flex-row items-center gap-2 relative -my-2 -mx-3 rounded-lg px-3 cursor-pointer py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]"
             v-for="item in footerInformation"
+            target="_blank"
             :key="item.id"
           >
             <component
@@ -57,7 +59,7 @@
               aria-hidden="true"
             />
             {{ item.content }}
-          </div>
+          </nuxt-link>
         </div>
 
         <div class="flex flex-col gap-4">
@@ -71,7 +73,7 @@
                 >{{ item.title }}
               </nuxt-link>
             </div>
-            <div class="flex flex-row gap-2">
+            <div class="flex flex-row gap-2 -ml-2">
               <div v-for="item in social" :key="item.id">
                 <nuxt-link target="_blank" :to="item.link">
                   <component
@@ -201,6 +203,7 @@ const footerInformation = [
         ]),
     }),
     content: optionsForFooter?.value?.acf?.footer_phone_number,
+    to: `tel:${optionsForFooter?.value?.acf?.footer_phone_number}`,
   },
   {
     id: 2,
@@ -214,7 +217,8 @@ const footerInformation = [
           }),
         ]),
     }),
-    content: optionsForFooter?.value?.acf?.footer_email,
+    content: optionsForFooter?.value.acf.footer_email,
+    to: `mailto:${optionsForFooter.value.acf.footer_email}`,
   },
   {
     id: 3,
@@ -229,6 +233,7 @@ const footerInformation = [
         ]),
     }),
     content: optionsForFooter?.value?.acf?.footer_address,
+    to: `https://www.google.com/maps/search/?api=1&query=${optionsForFooter.value.acf.footer_address}`,
   },
 ];
 </script>
