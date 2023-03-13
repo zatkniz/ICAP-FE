@@ -23,7 +23,7 @@
               alt=""
               class="w-[25vw]"
             />
-            <div class="flex items-center">
+            <div id="stats-container" class="flex items-center">
               <div
                 class="rounded-lg bg-white shadow-lg flex flex-row gap-2 w-fit h-fit p-3"
                 data-aos="fade"

@@ -1,7 +1,7 @@
 <template>
   <div
     id="myElement"
-    class="flex flex-col w-fit items-center justify-center p-6 text-center"
+    class="flex flex-col w-fit items-center justify-center p-6 text-center stat-component"
   >
     <h3 class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
       {{ title }}
@@ -50,8 +50,6 @@ const myElement = ref(null);
 
 onMounted(async () => {
   if (process.client) {
-    // const test = ref(document.getElementById("myElement"));
-
     const timer = new CountUp(props.id, props.number as any, {
       duration: 5,
     });

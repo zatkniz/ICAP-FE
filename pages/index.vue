@@ -32,7 +32,7 @@ const { setNumberSectionVisible } = useNumberSectionVisible();
 const target = ref();
 const isScrolled = ref(false);
 
-const { width, height } = useWindowSize();
+const { width } = useWindowSize();
 
 const { stop } = useIntersectionObserver(
   target,
@@ -93,10 +93,23 @@ onMounted(() => {
         scrub: 1,
         pin: true,
         start: "center center",
-        onLeaveBack: (i) => {
-          console.log(i);
-          // i.setPositions(500)
-        }
+      },
+    })
+    .from("#stats-container", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#stats",
+        scrub: 1,
+        start: "center 90%",
+      },
+    })
+    .from(".stat-component", {
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "#stats",
+        scrub: 1,
+        start: "center center",
       },
     });
 
