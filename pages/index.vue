@@ -73,24 +73,51 @@ onMounted(() => {
         scrub: true,
       },
     })
-    .to("#flower", {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: "#hero",
-        scrub: 1,
-        start: "bottom 7%",
+
+    // .to("#flower", {
+    //   opacity: 0,
+    //   scrollTrigger: {
+    //     markers: true,
+    //     trigger: "#video",
+    //     scrub: 1,
+    //     start: "top 90%",
+    //     end: "bottom bottom",
+    //     toggleActions: "play none reverse none",
+    //   },
+    // })
+
+    // .to("#flower", {
+    //   opacity: 0,
+    //   duration: 0.01,
+    //   markers: true,
+    //   scrollTrigger: {
+    //     trigger: "#video",
+    //     scrub: true,
+    //     start: "top center",
+    //     end: "top top",
+    //   },
+    // })
+
+    .fromTo(
+      "#flower",
+      {
+        opacity: 1,
+        rotate: 0,
       },
-    })
-    .to("#flower", {
-      opacity: 0,
-      duration: 0.01,
-      markers: true,
-      scrollTrigger: {
-        trigger: "#video",
-        scrub: true,
-        start: "top 15%",
-      },
-    })
+      {
+        opacity: 0,
+        ease: "power4.out",
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#video",
+          scrub: true,
+          start: "top center",
+          end: "bottom 15%",
+          fastScrollEnd: true,
+        },
+      }
+    )
+
     .to("#flower", {
       opacity: 1,
       x: width.value - 180,
@@ -104,14 +131,15 @@ onMounted(() => {
         start: "center center",
       },
     })
-    .from("#stats-container", {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: "#stats",
-        scrub: 1,
-        start: "center 90%",
-      },
-    })
+
+    // .from("#stats-container", {
+    //   opacity: 0,
+    //   scrollTrigger: {
+    //     trigger: "#stats",
+    //     scrub: 1,
+    //     start: "center 90%",
+    //   },
+    // })
     .from(".stat-component", {
       opacity: 0,
       stagger: 0.2,
@@ -128,8 +156,6 @@ onMounted(() => {
   //   ease: "power4.out",
   //   duration: 2,
   // });
-
-  gsap;
 
   // gsap.fromTo(
   //   "#flower",
