@@ -50,7 +50,7 @@ const myElement = ref(null);
 
 onMounted(async () => {
   if (process.client) {
-    const test = ref(document.getElementById("myElement"));
+    // const test = ref(document.getElementById("myElement"));
 
     const timer = new CountUp(props.id, props.number as any, {
       duration: 5,
